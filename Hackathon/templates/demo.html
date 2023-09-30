@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',path='/dem.css')}}">
+    <!-- <link rel="stylesheet" href="/static/dem.css"> -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="data">
+            {% for item in data %}
+            <div class="serverData">
+               <b>Name : </b> {{ item.name }}<br>
+               <b>Funds : </b>{{item.funds}}<br>
+               <b>Courses : </b>{{item.degrees}}<br>
+               <b>location : </b>{{item.location}}<br>
+               <button class ="serverbutton">More Info</button ><button class ="serverbutton">Apply Now </button>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="filters">
+            <label>Search</label>
+            <form action="/search" method="post">
+                <select name="location_search" id="">
+                    <option value="united-states">USA</option>
+                    <option value="united-kingdom">United Kingdom</option>
+                    <option value="canada">Canada</option>
+                    <option value="europe">Europe</option>
+                    <option value="south-africa">South Africa</option>
+                    <option value="india">India</option>
+                    <option value="nigeria">Nigeria</option>
+                    <option value="pakistan">Pakistan</option>
+                </select><br>
+                <select name="funds_search" id="">
+                    <option value="$2500">$2500</option>
+                    <option value="$2,000">Up to $2000</option>
+                    <option value="$2000">$2000</option>
+                    <option value="$3000">$3000</option>
+                    <option value="Full or partial scholarship">Full or partial scholarship</option>
+                    <option value="Partial tution fees">Partial tution fees</option>
+                    <option value="annual stipend">Full Cost of tution fees and an annual stipend</option>
+                    <option value="Pay any remaining balance">Pay any remaining balance</option>
+                    <option value="Tution Fee">Tution Fees</option>
+                    <option value="$16000">$16000</option>
+                    <option value="$14000">$14000</option>
+                    <option value="100% free">100% free</option>
+                    <option value="Fully Funded">Fully Funded</option>
+                    <option value="Partially Funded">Partially Funded</option>
+                </select><br>
+                <select name="degree_search" id="">
+                    <option value="Master">Master</option>
+                    <option value="Phd">Phd</option>
+                    <option value="Bachelor">Bachelor</option>
+                    <option value="Course">Course</option>
+                </select><br>
+                <input type="submit" value="Submit" class="submit-btn">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

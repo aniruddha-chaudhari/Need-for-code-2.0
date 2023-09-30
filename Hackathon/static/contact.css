@@ -1,0 +1,85 @@
+body{
+    background-color: purple;
+}
+
+.container{
+    /* display: grid;
+    grid-template-columns: auto auto; */
+    display:flex;
+    flex-direction: row;
+}
+
+
+.msg{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width:57vw;
+    height: 85vh;
+    flex-direction: column;
+    margin: 3vw;
+    border-radius: 5px;
+}
+
+
+.contact_info{
+    width:30vw;
+    height: 85vh;
+    background-color: white;
+    margin: 3vw;
+    border-radius: 5px;
+}
+
+.msg input[type="text"],
+.msg input[type="email"],
+.msg textarea {
+    width: 43vw;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 20px;
+}
+
+.msg textarea{
+    height: 94px;
+}
+
+.msg button[type="submit"]
+{
+    width: 90px;
+    height: 35px;
+}
+
+.contact_info {
+    box-sizing: border-box;
+    padding:0px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_info label{
+    margin:5px;
+}
+
+.contact_info ul {
+    padding-left: 3px;
+}
+
+.contact_info ul li{
+    list-style: none;
+    padding-bottom: 7px;
+}
+
+.contact_info ul li a{
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+}
